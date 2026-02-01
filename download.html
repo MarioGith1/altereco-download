@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alter-Eco - Download App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .download-btn {
+            background: linear-gradient(45deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(76, 175, 80, 0.4);
+        }
+        
+        .features {
+            text-align: left;
+            margin: 30px 0;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .feature-icon {
+            color: #4CAF50;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+            font-size: 14px;
+        }
+        
+        .version {
+            color: #888;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .download-btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">AE</div>
+        
+        <h1>Alter-Eco</h1>
+        <p class="subtitle">L'app ufficiale di Mercatopoli Lucca per scannerizzare e ricevere alert personalizzati</p>
+        
+        <a href="https://drive.google.com/uc?export=download&id=ID_FILE" class="download-btn" download>
+            📱 Scarica App Android
+        </a>
+        
+        <div class="info-box">
+            <strong>⚠️ Attenzione:</strong> Per installare l'app, abilita "Fonti sconosciute" nelle impostazioni Android.
+        </div>
+        
+        <div class="features">
+            <h3>🚀 Funzionalità Principali</h3>
+            <div class="feature-item">
+                <span class="feature-icon">📷</span>
+                <span>Scannerizza codici a barre</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🔔</span>
+                <span>Alert personalizzati su WhatsApp</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🎯</span>
+                <span>Promozioni in tempo reale</span>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">💳</span>
+                <span>Card virtuale integrata</span>
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">64.1</div>
+                <div class="stat-label">MB</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1.0.0</div>
+                <div class="stat-label">Versione</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">5.0+</div>
+                <div class="stat-label">Android</div>
+            </div>
+        </div>
+        
+        <div class="qr-placeholder">
+            QR Code<br>(Scansiona per scaricare)
+        </div>
+        
+        <div class="version">
+            Package: com.mercatopolilucca.altereco<br>
+            Aggiornamento: 1 Febbraio 2026
+        </div>
+    </div>
+    
+    <script>
+        // Contatore download
+        let downloadCount = localStorage.getItem('downloadCount') || 0;
+        downloadCount++;
+        localStorage.setItem('downloadCount', downloadCount);
+        
+        // Animazione pulsante
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+        
+        // Mostra contatore (opzionale)
+        console.log('Download count:', downloadCount);
+    </script>
+</body>
+</html>

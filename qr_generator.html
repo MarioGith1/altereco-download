@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generatore QR Code Download</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        #qrcode { margin: 20px auto; width: 256px; height: 256px; }
+        .url { background: #f0f0f0; padding: 10px; border-radius: 5px; word-break: break-all; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>QR Code per Download Alter-Eco</h1>
+    
+    <div class="url" id="urlDisplay">
+        Incolla qui l'URL del tuo download
+    </div>
+    
+    <div id="qrcode"></div>
+    
+    <script>
+        // Genera QR code quando l'utente inserisce l'URL
+        window.onload = function() {
+            const url = prompt("Inserisci l'URL completo della pagina di download:");
+            
+            if (url) {
+                document.getElementById('urlDisplay').textContent = url;
+                
+                new QRCode(document.getElementById("qrcode"), {
+                    text: url,
+                    width: 256,
+                    height: 256,
+                    colorDark: "#000000",
+                    colorLight: "#ffffff",
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        };
+    </script>
+</body>
+</html>

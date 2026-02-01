@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alter-Eco - Download App</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -120,6 +121,23 @@
             margin-top: 20px;
         }
         
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #qrcode {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 10px;
+            background: white;
+        }
+        
         .qr-placeholder {
             width: 150px;
             height: 150px;
@@ -224,8 +242,9 @@
             </div>
         </div>
         
-        <div class="qr-placeholder">
-            QR Code<br>(Scansiona per scaricare)
+        <div class="qr-code">
+            <div id="qrcode"></div>
+            <p style="font-size: 12px; color: #666; margin-top: 10px;">Scansiona per scaricare</p>
         </div>
         
         <div class="version">
@@ -250,6 +269,17 @@
         
         // Mostra contatore (opzionale)
         console.log('Download count:', downloadCount);
+        
+        // Genera QR code per la pagina download
+        const currentPageUrl = window.location.href;
+        new QRCode(document.getElementById("qrcode"), {
+            text: currentPageUrl,
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
     </script>
 </body>
 </html>
